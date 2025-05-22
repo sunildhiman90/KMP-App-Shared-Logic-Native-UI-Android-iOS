@@ -1,10 +1,9 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-
-    kotlin("plugin.serialization") version "1.9.20"
-
-    id("co.touchlab.skie") version "0.5.5"
+    alias(libs.plugins.serialization)
+    alias(libs.plugins.npm.publish)
+    alias(libs.plugins.touchlab.skie)
 }
 
 kotlin {
@@ -39,7 +38,6 @@ kotlin {
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
 
-
         }
 
         androidMain.dependencies {
@@ -48,7 +46,6 @@ kotlin {
 
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
-
         }
     }
 }
