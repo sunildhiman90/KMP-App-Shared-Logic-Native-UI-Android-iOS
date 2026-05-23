@@ -12,12 +12,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import kmp_app_shared_logic_native_ui.composeapp.generated.resources.Res
-import kmp_app_shared_logic_native_ui.composeapp.generated.resources.compose_multiplatform
-import org.jetbrains.compose.resources.ExperimentalResourceApi
-import org.jetbrains.compose.resources.painterResource
+import androidx.compose.ui.res.painterResource
+import com.codingambitions.kmmapp1.R
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun App() {
     MaterialTheme {
@@ -32,7 +29,7 @@ fun App() {
             }
             AnimatedVisibility(showImage) {
                 Image(
-                    painterResource(Res.drawable.compose_multiplatform),
+                    painterResource(R.drawable.ic_compose_multiplatform),
                     null
                 )
             }
